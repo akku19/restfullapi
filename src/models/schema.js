@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
+var validator = require('validator');
 const StudentsSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -7,14 +7,16 @@ const StudentsSchema = new mongoose.Schema({
         minlength:3
     },
     email:{
-        type:String,
-        required:true,
-        unique:[true,"email id is already prasent"],
-        validate(value){
-            if(!validator.isEmail(value)){
-                throw new Error("invalide email")
-            }
-        }
+        type:String,       
+        unique:[true,'email is already exist'],
+        validate: {
+            validator: function(v) {
+                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v);
+            },
+            message: "Please enter a valid email"
+        },
+        required: [true, "Email required"]
+           
     },
     phone:{
         type:Number,        

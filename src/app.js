@@ -60,7 +60,7 @@ app.put('/students/:id',async (req,res) =>{
         var newvalues = { $set: updatedata };      
         const updatedData = await StudentsSchema.updateOne(
             { _id: data},
-            newvalues 
+            newvalues
           );
         res.status(201).send(updatedData);
     } catch (error) {
