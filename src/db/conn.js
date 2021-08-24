@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/studentsapi',{
+mongoose.connect('mongodb+srv://akash:akku@roup@realmcluster.ahvxm.mongodb.net/akash?retryWrites=true&w=majority',{
     useCreateIndex:true,
     useNewUrlParser:true,
     useUnifiedTopology:true
