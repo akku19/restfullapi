@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 var db = require("./db/conn");
 const StudentsSchema = require('./models/schema');
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 8080;
 
 var bodyParser = require('body-parser');
 const Students = require('./models/schema');
