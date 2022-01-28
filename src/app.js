@@ -35,6 +35,7 @@ app.post('/students', async (req,res)=>{
 
 app.get('/students', async (req,res)=>{
   try {
+      console.log('stu');
     const userData =  await StudentsSchema.find({});
     console.log(userData);
     res.send(userData);
