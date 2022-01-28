@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors())
 
 app.get('/',async (req,res)=>{
-   res.send('home page change 1');
+   res.send('home page change');
 })
 
 
@@ -35,9 +35,9 @@ app.post('/students', async (req,res)=>{
 
 app.get('/students', async (req,res)=>{
   try {
-      console.log('stu');
+  
     const userData =  await StudentsSchema.find({});
-    console.log(userData);
+    
     res.send(userData);
   } catch (error) {
       res.send(error);
