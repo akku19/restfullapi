@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors())
 
 app.get('/',async (req,res)=>{
-   res.send('home page');
+   res.send('home page change');
 })
 
 
