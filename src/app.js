@@ -14,7 +14,7 @@ app.use(cors())
 
 app.get('/',async (req,res)=>{
    res.send('home page change');
-})
+}) 
 
 
 

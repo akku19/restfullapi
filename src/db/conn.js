@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
-
-
-mongoose.connect('mongodb+srv://akash:akkuroup@cluster0.cl9rr.mongodb.net/mernstack?retryWrites=true&w=majority',{
+require('dotenv').config()
+console.log(process.env.DB);
+mongoose.connect(process.env.DB,{
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex:true
 }).then(()=>{
     console.log('connection is successfully')
 }).catch((e)=>{
