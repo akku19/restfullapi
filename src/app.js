@@ -27,7 +27,7 @@ app.post('/students', async (req,res)=>{
     res.status(201).send(users);
     } catch (error) {
         res.status(400).send(error);
-    }
+    } 
     
 })
 
